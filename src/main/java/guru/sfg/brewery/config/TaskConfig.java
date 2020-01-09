@@ -10,10 +10,12 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 /**
  * Task Configuration - enable asyc tasks
  */
-@EnableScheduling
-@EnableAsync
+@EnableScheduling //enables spring to kick off scheduled jobs
+@EnableAsync //allows to run the scheduled jobs asyncrhonously
 @Configuration
 public class TaskConfig {
+
+    //sets up a small thread pool
     @Bean
     TaskExecutor taskExecutor() {
         return new SimpleAsyncTaskExecutor();

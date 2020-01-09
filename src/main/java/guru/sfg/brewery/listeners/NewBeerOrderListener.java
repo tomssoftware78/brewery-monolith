@@ -28,7 +28,7 @@ public class NewBeerOrderListener {
         this.beerInventoryRepository = beerInventoryRepository;
     }
 
-    @Async
+    @Async //will be running in a different thread
     @EventListener
     @Transactional
     public synchronized void listen(NewBeerOrderEvent event){ //needed sychronized to prevent errors

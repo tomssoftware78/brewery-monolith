@@ -31,6 +31,7 @@ import java.io.Serializable;
 /**
  * Catch order updates
  */
+//A hibernate interceptor
 @Slf4j
 @Component
 public class OrderHeaderInterceptor extends EmptyInterceptor {

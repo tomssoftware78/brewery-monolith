@@ -38,6 +38,7 @@ public class TastingRoomService {
 
     @Transactional
     @Scheduled(fixedRate = 2000) //run every 2 seconds
+    //places a random order = creating demand
     public void placeTastingRoomOrder(){
 
         List<Customer> customerList = customerRepository.findAllByCustomerNameLike(DefaultBreweryLoader.TASTING_ROOM);
